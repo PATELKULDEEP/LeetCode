@@ -1,0 +1,29 @@
+public class MaximumSubarray_53 {
+
+    public static void main(String[] args) {
+
+        int[] nums = {-2,1};
+        System.out.println(maxSubArray(nums));
+
+    }
+
+    public static int maxSubArray(int[] nums) {
+
+        int len = nums.length;
+        int sum = 0;
+        int max = nums[0];
+
+        for (int i = 0; i < len; i++) {
+            sum += nums[i];
+            if(sum > max) max = sum;
+
+            if(sum < 0) sum = 0;
+        }
+
+
+
+
+        return max;
+    }
+
+    }
